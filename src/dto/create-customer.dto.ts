@@ -1,5 +1,6 @@
+import { IsString} from 'class-validator';
 export  class CreateCustomerDto {
-    readonly firstName: string;
-    readonly lastName: string;
-    readonly phoneNumber: string;
+  @IsString() readonly firstName: string;
+  @IsString() readonly lastName: string;
+  @IsString() readonly phoneNumber: string;
   }

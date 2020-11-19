@@ -1,3 +1,4 @@
+import {IsString,IsNotEmpty} from "class-validator"
 export default class CreateProductDto {
-    readonly name: string;
+   @IsNotEmpty() @IsString() readonly name: string;
   }
