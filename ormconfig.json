@@ -6,6 +6,11 @@
     "password": "root",
     "database": "store",
     "entities": ["dist/**/*.entity{.ts,.js}"],
-    "synchronize": true
+    "synchronize": false,
+    "migrations": ["dist/migrations/*.js"],
+    "migrationsRun": true,
+    "cli": {
+        "migrationsDir": "src/migrations"
+    }
    
  }
