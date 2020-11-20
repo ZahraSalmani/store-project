@@ -4,13 +4,13 @@ import { AppService } from './app.service';
 import { CustomersModule } from './customers/customers.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ProductsModule } from './products/products.module';
-import { OrdersController } from './orders/orders.controller';
-import { OrdersService } from './orders/orders.service';
 import { OrdersModule } from './orders/orders.module';
+import { UserModule } from './users/users.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
-  imports: [CustomersModule,TypeOrmModule.forRoot(), ProductsModule, OrdersModule],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [CustomersModule,TypeOrmModule.forRoot(), ProductsModule, OrdersModule, UserModule,AuthModule],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
